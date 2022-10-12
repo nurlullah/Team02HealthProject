@@ -9,39 +9,12 @@ import pages.RoomPage;
 public class UIStepDefs {
 
     HomePage homePage = new HomePage();
+
     RoomPage roomPage = new RoomPage();
 
 
-    @Given("Sign in as admin")
-    public void sign_in_as_admin() {
-
-        homePage.signInIcon.click();
-        homePage.signInDropDown.click();
-        homePage.usernameBox.sendKeys("adminrecep");
-        homePage.passwordBox.sendKeys("123Recep");
-        homePage.signInSubmitButton.click();
 
 
-    }
-
-    @When("Click on ItemsTitles")
-    public void click_on_items_titles() {
-        homePage.itemsTitlesButton.click();
-
-
-    }
-
-    @When("Click on Room button")
-    public void click_on_room_button() {
-        homePage.roomButton.click();
-    }
-
-    @When("Click Create a new room button")
-    public void click_create_a_new_room_button() {
-
-        homePage.createANewRoomButton.click();
-
-    }
 
     @Then("Verify that Create or edit a Room is displayed")
     public void verify_that_create_or_edit_a_room_is_displayed() {
