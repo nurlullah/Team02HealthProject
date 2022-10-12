@@ -5,8 +5,8 @@ Feature: Medunna_Test
     Then verify the page title contains "MEDUNNA"
     Then capture the screenshot
 
-  @medunna_test
-  Scenario Outline: US01_Medunna
+  @US16_Room_Manipulation
+  Scenario Outline: US16_Room_Manipulation
     Given Sign in as admin
     When Click on ItemsTitles
     And Click on Room button
