@@ -5,7 +5,7 @@ public class KenanPageDelete {
         System.out.println("silmelik class gonderdim");
 
 
-        System.out.println("branch kenan a gectim 19.00");
+        System.out.println("branch kenan a geccctim 19.00");
 
     }
 }
