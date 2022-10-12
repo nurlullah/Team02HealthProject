@@ -1,4 +1,4 @@
-package runners;
+package runners.ui_runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        //
 
         plugin = {
                 "pretty",
@@ -18,8 +17,8 @@ import org.junit.runner.RunWith;
         },
         features = "./src/test/resources/features",//path od features folder
         glue = {"stepdefinitions"},//path of the step definitions folder
-        tags = "@smoke_test",
+        tags = "@regression_tests",
         dryRun = false
 )
-public class SmokeTestRunner {
+public class RegressionTestRunner {
 }

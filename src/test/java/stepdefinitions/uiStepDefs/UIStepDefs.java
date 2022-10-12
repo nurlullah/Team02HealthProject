@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.uiStepDefs;
 
 import io.cucumber.java.en.*;
 import org.junit.Assert;
@@ -6,7 +6,7 @@ import pages.HomePage;
 import pages.RoomPage;
 
 
-public class StepDefs {
+public class UIStepDefs {
 
     HomePage homePage = new HomePage();
     RoomPage roomPage = new RoomPage();
