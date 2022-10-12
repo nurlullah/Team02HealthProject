@@ -11,29 +11,66 @@ public class HomePage {
       PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//a[@aria-haspopup='true']")
-    public WebElement signInIcon;
 
-    @FindBy(id = "login-item")
-    public WebElement signInDropDown;
+    @FindBy(xpath = "//*[(text()='HOME')]")
+    public WebElement homeLink;
 
-    @FindBy(name = "username")
-    public WebElement usernameBox;
+    @FindBy(xpath = "//*[(text()='ABOUT')]")
+    public WebElement aboutLink;
 
-    @FindBy(name = "password")
-    public WebElement passwordBox;
+    @FindBy(xpath = "//*[(text()='SERVICES')]")
+    public WebElement servicesLink;
 
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement signInSubmitButton;
+    @FindBy(xpath = "//*[(text()='DEPARTMENTS')]")
+    public WebElement departmentsLink;
 
-    @FindBy(xpath = "//span[.='Items&Titles']")
+    @FindBy(xpath = "//*[(text()='DOCTORS')]")
+    public WebElement doctorsLink;
+
+    @FindBy(xpath = "//*[(text()='CONTACT')]")
+    public WebElement contactLink;
+
+    @FindBy(css = "#account-menu")//signin olmak ve sonrasında acoount işlemleri için
+    public WebElement signInAndAccountIcon;
+
+    @FindBy(xpath = "//*[(text()='Get Started')]")
+    public WebElement getStarted;
+
+    @FindBy(xpath = "//span[.='Items&Titles']")//adminde gözüküyor
     public WebElement itemsTitlesButton;
 
-    @FindBy(xpath = "//span[.='Room']")
-    public WebElement roomButton;
+    @FindBy(xpath = "//span[.='Administration']")//adminde gözüküyor
+    public WebElement administrationButton;
 
-    @FindBy(id = "jh-create-entity")
-    public WebElement createANewRoomButton;
+    @FindBy(xpath = "//*[(text()='MY PAGES')]")//staffda gözüküyor
+    public WebElement myPagesButton;
 
+    @FindBy(css = "svg[data-icon='th-list']")//patientde gözüküyor
+    public WebElement myPagesPatientButton;
+
+    @FindBy(xpath = "//*[(text()=' Appointment')]")
+    public WebElement makeAppointment;
+
+    //make an appointmenta clickleyince çıkıyor. homepage in alt kısmında
+    @FindBy(id = "firstName")
+    public WebElement firstName;
+
+    @FindBy(id = "lastName")
+    public WebElement lastName;
+
+    @FindBy(id = "ssn")
+    public WebElement ssn;
+
+    @FindBy(id = "email")
+    public WebElement email;
+
+    @FindBy(id = "phone")
+    public WebElement phoneNumber;
+
+    @FindBy(id = "appoDate")
+    public WebElement appointmentDateTime;
+
+    @FindBy(id = "register-submit")
+    public WebElement sendAppointmentRequest;
 
 }
