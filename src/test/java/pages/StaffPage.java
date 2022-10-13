@@ -119,7 +119,14 @@ public StaffPage() { PageFactory.initElements(Driver.getDriver(),this);}
 
     ////////////    3.part view--edit--delete        ////////////////
 
+    @FindBy(xpath = "//*[@data-prefix='fas' and  @data-icon='eye']")
+    public WebElement view;       //x tane cikiyor
 
+    @FindBy(css = "svg[data-icon=\"pencil-alt\"]")
+    public WebElement edit;  //x tane cikiyor
+
+    @FindBy(css = "svg[data-icon='trash']")
+    public WebElement delete;    //x tane cikiyor
 
 
 

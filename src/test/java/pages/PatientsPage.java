@@ -101,9 +101,18 @@ import utilities.Driver;
       @FindBy(xpath = "(//*[@class='btn btn-link btn-sm'])[4]")
       public WebElement patientID_new;     //benim olusturdugum no  276204
 
-
-
-
         ////////////    3.part view--edit--delete        ////////////////
+
+        @FindBy(xpath = "//*[@data-prefix='fas' and  @data-icon='eye']")
+        public WebElement view;       //2o tane cikiyor
+
+        @FindBy(xpath = "//*[@id=\"app-view-container\"]/div/div/div/div/div[1]/div/table/tbody/tr[1]/td[16]/div/a[2]/span/span")
+        public WebElement edit;  //ilk siradaki edit
+
+        @FindBy(css = "svg[data-icon='trash'] ")
+        public WebElement delete;    //2o tane cikiyor
+
+
+
 
     }
