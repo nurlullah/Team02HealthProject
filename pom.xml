@@ -11,9 +11,11 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-    </properties>
 
-    <!--    Add this right before project-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <argLine>-Duser.language=en</argLine>
+
+    </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -27,14 +29,13 @@
             <artifactId>webdrivermanager</artifactId>
             <version>5.3.0</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.8.0</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -42,36 +43,39 @@
             <version>7.8.0</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <!--&lt;!&ndash;&lt;!&ndash; https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter &ndash;&gt;
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
-            <version>1.6.0</version>
-        </dependency>
-
+            <version>1.6.0</version>&ndash;&gt;
+        </dependency>-->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>4.1.2</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>4.1.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-plugin -->
         <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-plugin</artifactId>
+            <version>7.8.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter -->
         <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports-cucumber4-adapter</artifactId>
+            <version>1.2.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
@@ -79,6 +83,8 @@
             <artifactId>postgresql</artifactId>
             <version>42.5.0</version>
         </dependency>
+
+
 
         <!-- API Dependencies -->
         <dependency>
@@ -120,8 +126,8 @@
         </dependency>
 
 
-    </dependencies>
 
+    </dependencies>
     <!--    Paste plugins after dependencies tag-->
     <build>
         <plugins>
@@ -171,7 +177,7 @@
                         <configuration>
                             <projectName>cucumber-framework</projectName>
                             <outputDirectory>${project.build.directory}</outputDirectory>
-                            <!-- <cucumberOutput>${project.build.directory}</cucumberOutput>-->
+                            <!--                            <cucumberOutput>${project.build.directory}</cucumberOutput>-->
                             <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
                                 <param>**/json-reports/*.json</param>
@@ -183,7 +189,16 @@
                     </execution>
                 </executions>
             </plugin>
-        </plugins>
-    </build>
 
+
+
+
+
+
+
+        </plugins>
+
+
+
+    </build>
 </project>
