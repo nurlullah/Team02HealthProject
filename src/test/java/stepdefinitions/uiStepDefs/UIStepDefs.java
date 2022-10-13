@@ -4,6 +4,7 @@ import io.cucumber.java.en.*;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.RoomPage;
+import pages.SignInDropdown;
 
 
 public class UIStepDefs {
@@ -14,6 +15,30 @@ public class UIStepDefs {
 
 
 
+    @Given("Sign in as admin")
+    public void sign_in_as_admin() {
+
+
+    }
+
+    @When("Click on ItemsTitles")
+    public void click_on_items_titles() {
+
+
+
+    }
+
+    @When("Click on Room button")
+    public void click_on_room_button() {
+
+    }
+
+    @When("Click Create a new room button")
+    public void click_create_a_new_room_button() {
+
+
+
+    }
 
 
     @Then("Verify that Create or edit a Room is displayed")
