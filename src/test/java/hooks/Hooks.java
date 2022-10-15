@@ -5,6 +5,8 @@ import io.cucumber.java.Scenario;
 import org.junit.Assume;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import utilities.ConfigReader;
 import utilities.Driver;
 public class Hooks {
     //    SKIPPING THE TAG THAT IS IN THE BEFORE ANNOTATION
@@ -25,5 +27,10 @@ public class Hooks {
             scenario.attach(screenshot,"image/png","failed_scenario");
             Driver.closeDriver();
         }
+    }
+    @Before
+    public void precondition(WebDriver Driver){
+
+
     }
 }
