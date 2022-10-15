@@ -65,7 +65,7 @@ public class PhysicianPage {
         @FindBy(css = "input#physician-description")
         public WebElement description;
 
-        @@FindBy(css = "input#file_image")
+        @FindBy(css = "input#file_image")
         public WebElement chooseFile;
 
         @FindBy(css = "input#physician-examFee")
