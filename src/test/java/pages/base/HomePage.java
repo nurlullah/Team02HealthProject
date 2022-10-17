@@ -1,4 +1,4 @@
-package pages;
+package pages.base;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,11 +8,8 @@ import utilities.Driver;
 public class HomePage {
     public HomePage() {
 
-      PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(),this);
     }
-
-
-
 
     @FindBy(xpath = "//*[(text()='HOME')]")
     public WebElement homeLink;
@@ -35,20 +32,15 @@ public class HomePage {
     @FindBy(css = "#account-menu")//signin olmak ve sonrasında acoount işlemleri için
     public WebElement signInAndAccountIcon;
 
+    @FindBy(id = "login-item")
+    public WebElement signIn;
+
+    @FindBy(xpath = "//*[(text()='Register')]")
+    public WebElement register;
+
+
     @FindBy(xpath = "//*[(text()='Get Started')]")
     public WebElement getStarted;
-
-    @FindBy(xpath = "//span[.='Items&Titles']")//adminde gözüküyor
-    public WebElement itemsTitlesButton;
-
-    @FindBy(xpath = "//span[.='Administration']")//adminde gözüküyor
-    public WebElement administrationButton;
-
-    @FindBy(xpath = "//*[(text()='MY PAGES')]")//staffda gözüküyor
-    public WebElement myPagesButton;
-
-    @FindBy(css = "svg[data-icon='th-list']")//patientde gözüküyor
-    public WebElement myPagesPatientButton;
 
     @FindBy(xpath = "//*[(text()=' Appointment')]")
     public WebElement makeAppointment;
@@ -75,4 +67,25 @@ public class HomePage {
     @FindBy(id = "register-submit")
     public WebElement sendAppointmentRequest;
 
+    //Sign in Pop Up locators
+    @FindBy(name = "username")
+    public WebElement usernameBox;
+
+    @FindBy(name = "password")
+    public WebElement passwordBox;
+
+    @FindBy(css = "input#rememberMe")
+    public WebElement rememberMeCheckbox;
+
+    @FindBy(xpath = "//*[(text()='Did you forget your password?')]")
+    public WebElement forgetPasswordButton;
+
+    @FindBy(xpath = "//*[(text()='Register a new account')]")
+    public WebElement registerNewAccountButton;
+
+    @FindBy(xpath = "//*[(text()='Cancel')]")
+    public WebElement cancelButton;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement signInSubmitButton;
 }

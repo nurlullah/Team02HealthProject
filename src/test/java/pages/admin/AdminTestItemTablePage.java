@@ -1,12 +1,12 @@
-package pages;
+package pages.admin;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class TestItem {
-    public TestItem(){
+public class AdminTestItemTablePage {
+    public AdminTestItemTablePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -34,7 +34,7 @@ public class TestItem {
     @FindBy(css = "a#jh-create-entity")
     public WebElement createNewTestItemButton;
 
-//aşağıdaki locatorlar Create a new test item a click ledikten sonrası için
+    //aşağıdaki locatorlar Create a new test item a click ledikten sonrası için
 //                       Edit e tıkladıktan sonrası için
 //                       view-->Edit e tıkladıktan sonrası için
     @FindBy(css = "#c-test-item-name")
@@ -60,7 +60,4 @@ public class TestItem {
 
     @FindBy(css = "#save-entity")
     public WebElement saveButton;
-
-
-
 }

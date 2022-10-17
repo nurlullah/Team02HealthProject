@@ -1,4 +1,4 @@
-package pages;
+package pages.admin;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,8 +7,8 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class MessagePage {
-    public MessagePage(){
+public class AdminMessagesTablePage {
+    public AdminMessagesTablePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -40,7 +40,4 @@ public class MessagePage {
 
     @FindBy(xpath = "//table[@class='table']//tbody//tr")   // All messages as list
     public List<WebElement> messageTableList;
-
-
-
 }

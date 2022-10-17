@@ -1,14 +1,20 @@
-package pages;
+package pages.admin;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
-//adminde gözüküyor
-public class ItemsTitles {
-    public ItemsTitles(){
+
+public class AdminHomePage {
+    public AdminHomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
+    @FindBy(xpath = "//span[.='Items&Titles']")//adminde gözüküyor
+    public WebElement itemsTitlesButton;
+
+    @FindBy(xpath = "//span[.='Administration']")//adminde gözüküyor
+    public WebElement administrationButton;
 
     @FindBy(xpath = "//*[@href='/patient']")
     public WebElement patientButton;
